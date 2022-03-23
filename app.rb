@@ -6,31 +6,15 @@ require 'sinatra/reloader' if development?
     'Hello world!'
   end
   
-  get '/secret' do
-    'This is not a secret.'
-  end
-  
-  # get '/orlane' do
-  #   'Hello Orlane!'
-  # end
-  
-  get '/testing' do
-    'Does this work?'
-  end
-
-  get '/cat' do
+  get '/random-cat' do
     @name = ["Amigo", "Misty", "Almond"].sample
     erb(:index)
   end
-  
-  get '/:name' do
-    "Hello #{params['name']}!"
+
+  get '/named-cat' do
+    @name = params[:name]
+    erb(:index)
   end
- 
-# class MyApp < Sinatra::Base
-  # configure :development do
-  #   register Sinatra::Reloader
-  # end
-# end
+
 
 
