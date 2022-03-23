@@ -4,3 +4,8 @@ source "https://rubygems.org"
 
 # gem "rails"
 
+gem 'sinatra'
+gem 'webrick'
+gem 'sinatra-contrib'
+gem 'sinatra-base'
+gem 'thin'
